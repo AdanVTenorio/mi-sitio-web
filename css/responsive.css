@@ -1,0 +1,133 @@
+/* ===== CELULARES ===== */
+@media (max-width: 768px) {
+    .header-contenedor {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav.active {
+        display: block;
+        background-color: #0b132b;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .subir {
+        position: fixed;
+        top: 305px;
+        right: 8px;
+        width: 70px;
+        height: 40px;
+        background-color: darkblue;
+        color: azure;
+        text-decoration: none;
+        line-height: 40px;
+        margin-bottom: 200px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        /* Una sola columna */
+        grid-template-rows: auto;
+        /* Altura automática según contenido */
+        grid-template-areas:
+            "title"
+            "arti1"
+            "arti2"
+            "arti3"
+            "arti4"
+            "arti5"
+            "arti6";
+        margin: 10px;
+        gap: 15px;
+    }
+
+    .formulario {
+        /* Define un ancho máximo para pantallas grandes y un ancho flexible */
+        max-width: 500px;
+        width: 90%;
+        /* Ocupa el 90% del ancho de la pantalla (deja margen a los lados) */
+        margin: 20px auto;
+        /* Centra el formulario horizontalmente */
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .formulario h3 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .etiqueta-formulario {
+        margin-bottom: 15px;
+        /* Usa flexbox para alinear la etiqueta y el input si es necesario (opcional) */
+        display: flex;
+        flex-direction: column;
+        /* Apila Label sobre Input */
+    }
+
+    .etiqueta-formulario label {
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .etiqueta-formulario input[type="text"],
+    .etiqueta-formulario input[type="tel"],
+    .etiqueta-formulario input[type="email"],
+    .etiqueta-formulario input[type="password"],
+    .etiqueta-formulario textarea {
+        /* ¡CLAVE RESPONSIVA! Ocupa el 100% del ancho disponible */
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        /* El textarea debe ser redimensionable verticalmente para móviles */
+        resize: vertical;
+        /* Asegura un tamaño de fuente legible en móviles */
+        font-size: 16px;
+    }
+
+    .botones-formulario {
+        /* Usa Flexbox para que los botones se vean uno al lado del otro */
+        display: flex;
+        /* Si no caben, se envuelven a la siguiente línea */
+        flex-wrap: wrap;
+        /* Distribuye el espacio entre ellos */
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .botones-formulario input[type="submit"],
+    .botones-formulario input[type="reset"] {
+        /* CLAVE RESPONSIVA: En celulares, los botones pueden ocupar el ancho completo */
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        /* Espacio entre botones en vista móvil */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    @media (min-width: 480px) {
+
+        .botones-formulario input[type="submit"],
+        .botones-formulario input[type="reset"] {
+            /* En pantallas más anchas, que ocupen la mitad menos un margen */
+            width: calc(50% - 10px);
+            margin-bottom: 0;
+            /* Quita el margen inferior */
+        }
+    }
+}

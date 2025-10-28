@@ -1,0 +1,344 @@
+/* #003c78 Azul intenso */
+/* #00a1f3 Azul claro */
+/* #0080dd Azul medio */
+/* #e2d9d9 Arena */
+
+/* ===== TIPO DE LETRA ===== */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Work Sans", sans-serif;
+    color: #000000;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== CABECERA ===== */
+.header {
+    background-color: #00a1f3;
+}
+
+.header-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: large;
+}
+
+.nav a:hover {
+    color: #003c78;
+}
+
+/* ===== MUESTRA QUE PESTAÑA ESTA ACTIVA EN EL MENU ===== */
+.nav-list a.active {
+    color: #003c78;
+}
+
+/* ===== NOMBRE CABECERA AdanVDEV===== */
+.container-name {
+    flex: 1;
+    /* Ocupa el espacio disponible entre logo y nav */
+    color: #003c78;
+    text-align: left;
+    margin: 0;
+}
+
+.logo img {
+    height: 110px;
+    margin: 10px;
+}
+
+/* ===== CUERPO DE LA PAGINA ===== */
+
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    background-image: url('../img/desarrollo-web.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    /* Ajusta el alto según tu diseño */
+    color: #fff;
+    display: flex;
+    /* Centra el contenido */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    text-align: center;
+}
+
+.hero-contenedor {
+    position: relative;
+    top: 10px;
+    height: 70vh;
+    z-index: 1;
+    /* Asegura que el texto quede encima del overlay */
+    max-width: 900px;
+    /* padding: 10px; */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* ===== BOTON SUBIR ===== */
+.btn {
+    background-color: #007fdd;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #6ab0f5;
+}
+
+/* ===== ARTICULOS ===== */
+article {
+    text-align: center;
+}
+
+article p {
+    text-align: justify;
+}
+
+/* ===== SERVICIOS ===== */
+
+.services {
+    background-color: #d8e9f8;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80px auto auto;
+    grid-template-areas:
+        " title title title"
+        "arti1 arti2 arti3"
+        "arti4 arti5 arti6"
+    ;
+    gap: 20px;
+    margin-top: 30px;
+    color: #000000;
+}
+
+.title {
+    grid-area: title;
+    border-radius: 10px;
+    padding: 30px;
+
+}
+
+.arti1 {
+    background-color: #00a1f3;
+    grid-area: arti1;
+    border-radius: 10px;
+    border: 1px solid #0080dd;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.arti2 {
+    background-color: #00a1f3;
+    grid-area: arti2;
+    border-radius: 10px;
+    border: 1px solid #0080dd;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.arti3 {
+    background-color: #00a1f3;
+    grid-area: arti3;
+    border-radius: 10px;
+    border: 1px solid #0080dd;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.arti4 {
+    background-color: #00a1f3;
+    grid-area: arti4;
+    border-radius: 10px;
+    border: 1px solid #0080dd;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.arti5 {
+    background-color: #00a1f3;
+    grid-area: arti5;
+    border-radius: 10px;
+    border: 1px solid #0080dd;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+.arti6 {
+    background-color: #00a1f3;
+    grid-area: arti6;
+    border-radius: 10px;
+    border: 1px solid #0080dd;
+    padding: 25px;
+    margin-top: 10px;
+}
+
+/* FORMULARIO DE CONTACTO */
+.formulario {
+    background-color: #00a1f3;
+    width: 600px;
+    padding: 70px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.etiqueta-formulario {
+    padding: 20px;
+    text-align: justify;
+}
+
+.botones-formulario {
+    padding: 30px;
+    margin: 0 auto;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #1b2266;
+    color: #ffffff;
+    padding: 40px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-social u li a {
+    text-align: left;
+}
+
+.footer h3 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: #00a1f4;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #007bff;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    border-top: 1px solid #222;
+    padding-top: 15px;
+}
+
+.escribeme {
+    text-align: center;
+}
+
+.footer-links .active {
+    color: blue;
+}
+
+/* ===== BOTON SUBIR ===== */
+.boton-fixed {
+    position: fixed;
+    bottom: 25px;
+    /* 25 píxeles desde abajo */
+    right: 25px;
+    /* 25 píxeles desde la derecha */
+    background-color: #007bff;
+    /* Color de fondo (un azul bonito) */
+    color: white;
+    /* Color del icono (blanco) */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    /* Nos permite centrar el icono fácilmente */
+    align-items: center;
+    /* Centra el icono verticalmente */
+    justify-content: center;
+    /* Centra el icono horizontalmente */
+    font-size: 24px;
+    /* Tamaño del icono */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Sombra para que destaque */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+}
+
+/* Efecto al pasar el mouse por encima */
+.boton-fixed:hover {
+    background-color: #0056b3;
+    /* Un azul más oscuro */
+}
+
+
+/* sticky */
+/* .sticky-container {
+    height: auto;
+    background-color: rgb(201, 232, 245);
+}
+
+.sticky-box {
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px;
+    border-bottom: 2px solid blue;
+} */
+
+/* .sticky-box nav ul li a {
+    color: azure;
+    list-style: none;
+    text-decoration: none;
+} */
