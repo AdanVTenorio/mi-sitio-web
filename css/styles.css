@@ -1,18 +1,13 @@
-/* #003c78 Azul intenso */
-/* #00a1f3 Azul claro */
-/* #0080dd Azul medio */
-/* #e2d9d9 Arena */
-
 /* ===== TIPO DE LETRA ===== */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     font-family: "Work Sans", sans-serif;
+    font-weight: 500;
     color: #000000;
     background-color: #fff;
     line-height: 1.6;
 }
-
 
 .contenedor {
     width: 90%;
@@ -31,25 +26,27 @@ body {
     justify-content: space-between;
 }
 
-.nav-list {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+/* menu nuevo */
 
-.nav-list a {
+.custom-navbar .navbar-brand {
     color: #fff;
-    text-decoration: none;
     font-weight: 500;
-    font-size: large;
+    transition: color 0.3s ease;
 }
 
-.nav a:hover {
+.custom-navbar .navbar-brand:hover {
     color: #003c78;
 }
 
-/* ===== MUESTRA QUE PESTAÑA ESTA ACTIVA EN EL MENU ===== */
-.nav-list a.active {
+.custom-navbar .nav-link {
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-size: larger;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
     color: #003c78;
 }
 
@@ -67,9 +64,7 @@ body {
     margin: 10px;
 }
 
-/* ===== CUERPO DE LA PAGINA ===== */
-
-/* ===== HERO ===== */
+/* =====SECCION HERO ===== */
 .hero {
     position: relative;
     background-image: url('../img/desarrollo-web.jpg');
@@ -94,20 +89,19 @@ body {
     z-index: 1;
     /* Asegura que el texto quede encima del overlay */
     max-width: 900px;
-    /* padding: 10px; */
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.hero h2 {
+    color: #FFD700;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     margin-bottom: 20px;
 }
 
-/* ===== BOTON SUBIR ===== */
 .btn {
     background-color: #007fdd;
     color: #fff;
@@ -119,7 +113,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #6ab0f5;
+    background-color: #FFD700;
+    color: #000000;
 }
 
 /* ===== ARTICULOS ===== */
@@ -214,6 +209,52 @@ article p {
     margin-top: 10px;
 }
 
+/* ===== SECCION SOBRE MI ===== */
+.informacion {
+    text-align: justify;
+}
+
+.informacion h2,
+h3 {
+    text-align: center;
+}
+
+.sobre-mi {
+    display: grid;
+    grid-template-columns: 2fr 4fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: auto;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.mi-foto {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    margin-top: 10rem;
+    border: 0.2rem solid #1b2266;
+}
+
+.logotipos {
+    margin-top: 3rem;
+}
+
+.logo-coder,
+.logo-uni,
+.logo-udemy,
+.logo-platzi {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    margin: 1rem;
+    border: 0.2rem solid #1b2266;
+}
+
+.contacto {
+    text-align: center;
+}
+
 /* FORMULARIO DE CONTACTO */
 .formulario {
     background-color: #00a1f3;
@@ -233,11 +274,25 @@ article p {
     margin: 0 auto;
 }
 
+.botones {
+    height: 2.5rem;
+    border-radius: 5px;
+}
+
+.campo-texto {
+    width: 100%;
+    height: 2rem;
+    border-radius: 5px;
+}
+
+textarea {
+    border: 1px solid #000000;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background-color: #1b2266;
     color: #ffffff;
-    padding: 40px 20px;
 }
 
 .footer-container {
@@ -245,20 +300,19 @@ article p {
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.footer-social u li a {
-    text-align: left;
+.footer-social a {
+    display: block;
 }
 
 .footer h3 {
-    text-align: center;
     margin-bottom: 10px;
     color: #00a1f4;
-}
-
-.footer ul {
-    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .footer a {
@@ -272,14 +326,18 @@ article p {
 
 .footer-copy {
     text-align: center;
-    margin-top: 20px;
+    padding-bottom: 10px;
     font-size: 0.9rem;
     border-top: 1px solid #222;
-    padding-top: 15px;
 }
 
 .escribeme {
     text-align: center;
+}
+
+.footer-links a {
+    display: block;
+
 }
 
 .footer-links .active {
@@ -316,29 +374,6 @@ article p {
     /* Asegura que esté por encima de otros elementos */
 }
 
-/* Efecto al pasar el mouse por encima */
 .boton-fixed:hover {
     background-color: #0056b3;
-    /* Un azul más oscuro */
 }
-
-
-/* sticky */
-/* .sticky-container {
-    height: auto;
-    background-color: rgb(201, 232, 245);
-}
-
-.sticky-box {
-    position: sticky;
-    top: 0;
-    background: white;
-    padding: 10px;
-    border-bottom: 2px solid blue;
-} */
-
-/* .sticky-box nav ul li a {
-    color: azure;
-    list-style: none;
-    text-decoration: none;
-} */
