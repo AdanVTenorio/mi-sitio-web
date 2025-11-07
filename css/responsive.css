@@ -57,6 +57,10 @@
         gap: 1rem;
     }
 
+    .contacto {
+        text-align: center;
+    }
+
     .mi-foto {
         width: 4rem;
         height: 4rem;
