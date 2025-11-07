@@ -253,10 +253,9 @@ h3 {
 
 /* =====SECCION PORTAFOLIOS ===== */
 .mis-trabajos {
-    background-color: aqua;
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: center;
+    gap: 40px;
 }
 
 /* ===== SECCION FORMULARIO DE CONTACTO ===== */
