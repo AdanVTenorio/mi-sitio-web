@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
 }
 
-/* menu nuevo */
+/* ===== SECCION MENU ===== */
 
 .custom-navbar .navbar-brand {
     color: #fff;
@@ -251,11 +251,15 @@ h3 {
     border: 0.2rem solid #1b2266;
 }
 
-.contacto {
-    text-align: center;
+/* =====SECCION PORTAFOLIOS ===== */
+.mis-trabajos {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
-/* FORMULARIO DE CONTACTO */
+/* ===== SECCION FORMULARIO DE CONTACTO ===== */
 .formulario {
     background-color: #00a1f3;
     width: 600px;

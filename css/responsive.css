@@ -168,4 +168,9 @@
         cursor: pointer;
         font-size: 16px;
     }
+
+    .cont-services {
+        display: flex;
+        padding: 50px;
+    }
 }
