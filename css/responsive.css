@@ -1,6 +1,21 @@
 /* ===== CELULARES ===== */
 @media (max-width: 768px) {
 
+    body {
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        color: #FFD700;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
     .contenedor {
         width: 100%;
         max-width: 800px;
@@ -81,18 +96,8 @@
         border: 0.2rem solid #1b2266;
     }
 
-    /* BOTON SUBIR */
-    .subir {
-        position: fixed;
-        top: 305px;
-        right: 8px;
-        width: 70px;
-        height: 40px;
-        background-color: darkblue;
-        color: azure;
-        text-decoration: none;
-        line-height: 40px;
-        margin-bottom: 200px;
+    .boton-fixed {
+        bottom: 65px;
     }
 
     /* SECCION SERVICIOS */
@@ -111,6 +116,10 @@
             "arti6";
         margin: 10px;
         gap: 15px;
+    }
+
+    .title h2 {
+        font-size: 20px;
     }
 
     /* SECCION CONTACTO */
@@ -173,17 +182,23 @@
         font-size: 16px;
     }
 
+    /* SECCION SERVICIOS */
     .cont-services {
         display: flex;
         padding: 50px;
     }
 
+    /* SECCION PORTAFOLIO */
     .mis-trabajos {
-        display: block;
-
+        flex-direction: column;
+        /* cambia a vertical */
+        align-items: center;
     }
 
     .mis-trabajos img {
-        margin-bottom: 15px;
+        width: 90%;
+        /* se ajusta al ancho del móvil */
+        max-width: 300px;
+        /* evita que crezca demasiado */
     }
 }

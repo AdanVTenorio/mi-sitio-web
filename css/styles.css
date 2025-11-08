@@ -236,6 +236,10 @@ h3 {
     border: 0.2rem solid #1b2266;
 }
 
+.contacto {
+    text-align: center;
+}
+
 .logotipos {
     margin-top: 3rem;
 }
@@ -331,7 +335,7 @@ textarea {
     text-align: center;
     padding-bottom: 10px;
     font-size: 0.9rem;
-    border-top: 1px solid #222;
+    border-top: 1px solid #007bff;
 }
 
 .escribeme {
@@ -350,7 +354,7 @@ textarea {
 /* ===== BOTON SUBIR ===== */
 .boton-fixed {
     position: fixed;
-    bottom: 25px;
+    bottom: 60px;
     /* 25 píxeles desde abajo */
     right: 25px;
     /* 25 píxeles desde la derecha */
