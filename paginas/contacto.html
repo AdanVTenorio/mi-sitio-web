@@ -16,23 +16,28 @@
 
 <body>
     <!-- ===== CABECERA =====-->
-    <header class="header">
-        <div class="contenedor header-contenedor">
-            <!--Logo-->
-            <div class="logo">
-                <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
-            </div>
-            <div class="container-name">
-                <h1 class="name"><strong>AdanVDev</strong></h1>
-            </div>
-            <!-- ===== BARRA DE NAVEGACION =====-->
-            <nav class="navbar navbar-expand-lg custom-navbar">
-                <div class="container">
-                    <!-- Botón hamburguesa -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+    <header>
+        <section>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary color-barranav">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/logo.png" alt="Logo" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                    </a>
+
+                    <div class="container-name">
+                        <h1 class="name"><strong>AdanVDev</strong></h1>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="menuNav">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
 
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="../index.html"><strong>Inicio</strong></a>
@@ -54,39 +59,43 @@
                     </div>
                 </div>
             </nav>
-        </div>
+        </section>
     </header>
     <main>
         <!-- ===== FORMULARIO =====-->
-        <section class="services">
-            <div class="formulario">
-                <form>
-                    <h2>Contactanos</h2>
-                    <div class="etiqueta-formulario">
-                        <label>Nombre: </label>
-                        <input type="text" id="nombre" name="nombre" class="campo-texto" placeholder="Nombre y apellido"
-                            pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" minlength="10" title="Nombre y Apellido" required>
-                    </div>
-                    <div class="etiqueta-formulario">
-                        <label>Teléfono: </label>
-                        <input type="tel" id="telefono" name="telefono" class="campo-texto" inputmode="numeric"
-                            placeholder="Teléfono con lada" pattern="[0-9]{10}" title="Deben ser 10 digitos" required>
-                    </div>
-                    <div class="etiqueta-formulario">
-                        <label>Email: </label>
-                        <input type="email" id="email" name="email" class="campo-texto" placeholder="Ingresa tu email"
-                            required>
-                    </div>
-                    <div class="etiqueta-formulario">
-                        <label for="comentarios">Mensaje:</label><br>
-                        <textarea id="comentarios" name="comentarios" class="campo-texto" placeholder="Escribe mensaje:"
-                            rows="5" cols="70" required></textarea>
-                    </div>
-                    <div class="botones-formulario">
-                        <input type="submit" value="Enviar" class="botones">
-                        <input type="reset" value="Limpiar" class="botones">
-                    </div>
-                </form>
+        <section class="general-pagina">
+            <div class="contenedor">
+                <div class="formulario">
+                    <form>
+                        <h2>Contactanos</h2>
+                        <div class="etiqueta-formulario">
+                            <label>Nombre: </label>
+                            <input type="text" id="nombre" name="nombre" class="campo-texto"
+                                placeholder="Nombre y apellido" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" minlength="10"
+                                title="Nombre y Apellido" required>
+                        </div>
+                        <div class="etiqueta-formulario">
+                            <label>Teléfono: </label>
+                            <input type="tel" id="telefono" name="telefono" class="campo-texto" inputmode="numeric"
+                                placeholder="Teléfono con lada" pattern="[0-9]{10}" title="Deben ser 10 digitos"
+                                required>
+                        </div>
+                        <div class="etiqueta-formulario">
+                            <label>Email: </label>
+                            <input type="email" id="email" name="email" class="campo-texto"
+                                placeholder="Ingresa tu email" required>
+                        </div>
+                        <div class="etiqueta-formulario">
+                            <label for="comentarios">Mensaje:</label><br>
+                            <textarea id="comentarios" name="comentarios" class="campo-texto"
+                                placeholder="Escribe mensaje:" rows="5" cols="70" required></textarea>
+                        </div>
+                        <div class="botones-formulario">
+                            <input type="submit" value="Enviar" class="botones">
+                            <input type="reset" value="Limpiar" class="botones">
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>

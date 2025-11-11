@@ -16,23 +16,28 @@
 
 <body>
     <!-- ===== CABECERA =====-->
-    <header class="header">
-        <div class="contenedor header-contenedor">
-            <!--Logo-->
-            <div class="logo">
-                <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
-            </div>
-            <div class="container-name">
-                <h1 class="name"><strong>AdanVDev</strong></h1>
-            </div>
-            <!-- ===== BARRA DE NAVEGACION =====-->
-            <nav class="navbar navbar-expand-lg custom-navbar">
-                <div class="container">
-                    <!-- Botón hamburguesa -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+    <header>
+        <section>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary color-barranav">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/logo.png" alt="Logo" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                    </a>
+
+                    <div class="container-name">
+                        <h1 class="name"><strong>AdanVDev</strong></h1>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="menuNav">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
 
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="../index.html"><strong>Inicio</strong></a>
@@ -49,72 +54,77 @@
                     </div>
                 </div>
             </nav>
-        </div>
+
+        </section>
     </header>
     <!-- ===== SOBRE MI =====-->
-    <main class="services">
-        <section class="sobre-mi">
-            <div>
-                <img src="../img/sobre-mi.jpg" class="mi-foto" alt="mi-foto-personal">
-            </div>
-            <section class="informacion">
-                <h2>Algo sobre Mi</h2>
-                <div>
-                    <h3>¡Hola! Soy Adán Velázquez</h3>
-                    <p> Ingeniero en Sistemas Computacionales y Desarrollador Web.
-                        Me especializo en la creación, mantenimiento y administración de páginas web
-                        funcionales,
-                        seguras y adaptadas a las necesidades de cada cliente.
-                    </p>
-                    <h2>Quién soy</h2>
-                    <p>Desde siempre me ha apasionado la tecnología y la forma en que puede transformar la vida
-                        de
-                        las personas y los negocios.
-                        Como ingeniero en sistemas, encontré en el desarrollo web el punto perfecto donde la
-                        lógica,
-                        la creatividad y la innovación se unen.
-                        Actualmente, me encuentro cursando una especialización en desarrollo web Full Stack, la
-                        cual
-                        me permitirá ampliar mis conocimientos y dominar nuevas tecnologías para ofrecer
-                        soluciones
-                        cada vez más completas y modernas.
-                    </p>
-                    <h2>Qué hago</h2>
+    <main>
+        <section class="general-pagina">
+            <section class="sobre-mi">
+                <div class="foto">
+                    <img src="../img/sobre-mi.jpg" class="mi-foto" alt="mi-foto-personal">
+                </div>
+                <section class="informacion">
+                    <div class="title">
+                        <h2>Algo sobre Mi</h2>
+                    </div>
+                    <div>
+                        <h2>¡Hola! Soy Adán Velázquez</h2>
+                        <p> Ingeniero en Sistemas Computacionales y Desarrollador Web.
+                            Me especializo en la creación, mantenimiento y administración de páginas web
+                            funcionales,
+                            seguras y adaptadas a las necesidades de cada cliente.
+                        </p>
+                        <h2>Quién soy</h2>
+                        <p>Desde siempre me ha apasionado la tecnología y la forma en que puede transformar la vida
+                            de
+                            las personas y los negocios.
+                            Como ingeniero en sistemas, encontré en el desarrollo web el punto perfecto donde la
+                            lógica,
+                            la creatividad y la innovación se unen.
+                            Actualmente, me encuentro cursando una especialización en desarrollo web Full Stack, la
+                            cual
+                            me permitirá ampliar mis conocimientos y dominar nuevas tecnologías para ofrecer
+                            soluciones
+                            cada vez más completas y modernas.
+                        </p>
+                        <h2>Qué hago</h2>
 
-                    <p>Mi trabajo se enfoca en ayudar a empresas, emprendedores y profesionales independientes a
-                        tener una presencia web sólida, funcional y atractiva.
-                        Ofrezco servicios de:
-                    </p>
-                    <ul>
-                        <p>Creación de páginas web personalizadas.</p>
-                        <p>Mantenimiento y optimización de sitios existentes.</p>
-                        <p>Administración y actualización de contenido web.</p>
-                    </ul>
-                    <p>Trabajo con tecnologías como HTML, CSS, Bootstrap, SQL y PHP, garantizando estructuras
-                        limpias, seguras y totalmente responsivas.</p>
-                    <h2>Filosofía y valores</h2>
-                    <p>Creo firmemente que el éxito de un proyecto se construye con honestidad, compromiso y
-                        comunicación constante.</p>
-                    <p>Mi objetivo no es solo entregar un sitio web, sino crear una herramienta que genere valor
-                        real para cada cliente.</p>
-                    <p>Me caracterizo por ser un profesional responsable, transparente y orientado a resultados.
-                    </p>
-                    <section class="contacto">
-                        <div>
-                            <h2>¿Tienes una idea o proyecto en mente?</h2>
-                            <p>Estaré encantado de escucharte y ayudarte a hacerla realidad.</p>
-                            <br>
-                            <a href="./contacto.html" class="btn">Contactame</a>
+                        <p>Mi trabajo se enfoca en ayudar a empresas, emprendedores y profesionales independientes a
+                            tener una presencia web sólida, funcional y atractiva.
+                            Ofrezco servicios de:
+                        </p>
+                        <ul>
+                            <p>Creación de páginas web personalizadas.</p>
+                            <p>Mantenimiento y optimización de sitios existentes.</p>
+                            <p>Administración y actualización de contenido web.</p>
+                        </ul>
+                        <p>Trabajo con tecnologías como HTML, CSS, Bootstrap, SQL y PHP, garantizando estructuras
+                            limpias, seguras y totalmente responsivas.</p>
+                        <h2>Filosofía y valores</h2>
+                        <p>Creo firmemente que el éxito de un proyecto se construye con honestidad, compromiso y
+                            comunicación constante.</p>
+                        <p>Mi objetivo no es solo entregar un sitio web, sino crear una herramienta que genere valor
+                            real para cada cliente.</p>
+                        <p>Me caracterizo por ser un profesional responsable, transparente y orientado a resultados.
+                        </p>
+                        <div class="contactame">
+                            <div>
+                                <h2>¿Tienes una idea o proyecto en mente?</h2>
+                                <p>Estaré encantado de escucharte y ayudarte a hacerla realidad.</p>
+                                <br>
+                                <a href="./contacto.html" class="btn">Contactame</a>
+                            </div>
                         </div>
-                    </section>
+                </section>
+                <div class="logotipos">
+                    <h3>Estudios</h3>
+                    <img src="../img/univac.jpg" alt="logo-universidad" class="logo-uni">
+                    <img src="../img/coder.jpg" alt="logo-coder-house" class="logo-coder">
+                    <img src="../img/udemy.png" alt="logo-udemy" class="logo-udemy">
+                    <img src="../img/platzi.png" alt="logo-platzi" class="logo-platzi">
+                </div>
             </section>
-            <div class="logotipos">
-                <h3>Estudios</h3>
-                <img src="../img/univac.jpg" alt="logo-universidad" class="logo-uni">
-                <img src="../img/coder.jpg" alt="logo-coder-house" class="logo-coder">
-                <img src="../img/udemy.png" alt="logo-udemy" class="logo-udemy">
-                <img src="../img/platzi.png" alt="logo-platzi" class="logo-platzi">
-            </div>
         </section>
     </main>
     <!-- ===== FOOTER ===== -->

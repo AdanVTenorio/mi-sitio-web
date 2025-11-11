@@ -1,45 +1,28 @@
 /* ===== CELULARES ===== */
 @media (max-width: 768px) {
 
-    body {
+    body h2 h3 {
         font-size: 14px;
     }
 
     /* SECCION HEADER */
-    .contenedor {
-        width: 100%;
-        max-width: 800px;
+    .container-fluid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contenedor .header-contenedor {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 40px;
+    .navbar-nav {
+        align-items: center !important;
     }
 
-    .hero h2 {
-        color: #FFD700;
-        font-size: 1.5rem;
-        margin-bottom: 10px;
+    .navbar-brand {
+        margin-left: 5px;
     }
 
-    .hero p {
-        font-size: 1rem;
-        margin-bottom: 20px;
-    }
-
-    /* MENU HAMBURGUESA */
-    .navbar-toggler {
-        border-color: rgba(255, 255, 255, 0.5);
-    }
-
-    .navbar-toggler-icon {
-        filter: invert(100%);
-    }
-
-    .navbar-nav .nav-link {
-        font-weight: 100;
-        font-size: small;
+    /* AdanVDev */
+    .name {
+        color: #003c78;
     }
 
     /* SECCION FOOTER */
@@ -77,6 +60,10 @@
         text-align: center;
     }
 
+    .informacion h2 {
+        font-size: 20px;
+    }
+
     .mi-foto {
         width: 4rem;
         height: 4rem;
@@ -97,16 +84,7 @@
         border: 0.2rem solid #1b2266;
     }
 
-    /* BOTON SUBIR */
-    .boton-fixed {
-        bottom: 65px;
-        right: 15px;
-    }
-
     /* SECCION SERVICIOS */
-    .cont-services {
-        display: flex;
-    }
 
     /* SECCION PORTAFOLIO */
     .mis-trabajos {
@@ -124,23 +102,21 @@
 
     /* SECCION CARACTERISTICAS */
     .services-grid {
+        display: grid;
         grid-template-columns: 1fr;
-        /* Una sola columna */
-        grid-template-rows: auto;
-        /* Altura automática según contenido */
-        grid-template-areas:
-            "title"
-            "arti1"
-            "arti2"
-            "arti3"
-            "arti4"
-            "arti5"
-            "arti6";
         margin: 10px;
         gap: 15px;
+        color: #000000;
     }
 
-    .title h2 {
+    /* BOTON SUBIR */
+    .boton-fixed {
+        bottom: 65px;
+        right: 15px;
+    }
+
+    .title h2,
+    .caracteristicas h3 {
         font-size: 20px;
     }
 

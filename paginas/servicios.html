@@ -16,23 +16,28 @@
 
 <body>
     <!-- ===== CABECERA =====-->
-    <header class="header">
-        <div class="contenedor header-contenedor">
-            <!--Logo-->
-            <div class="logo">
-                <a href="../index.html"><img src="../img/logo.png" alt="Logo"></a>
-            </div>
-            <div class="container-name">
-                <h1 class="name"><strong>AdanVDev</strong></h1>
-            </div>
-            <!-- ===== BARRA DE NAVEGACION =====-->
-            <nav class="navbar navbar-expand-lg custom-navbar">
-                <div class="container">
-                    <!-- Botón hamburguesa -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+    <header>
+        <section>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary color-barranav">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand" href="#">
+                        <img src="../img/logo.png" alt="Logo" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                    </a>
+
+                    <div class="container-name">
+                        <h1 class="name"><strong>AdanVDev</strong></h1>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="menuNav">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
 
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a class="nav-link" href="../index.html"><strong>Inicio</strong></a>
@@ -49,50 +54,63 @@
                     </div>
                 </div>
             </nav>
-        </div>
+        </section>
     </header>
     <!--Cuerpo de la pagina-->
-    <section class="services">
-        <div class="contenedor cont-services">
-            <div class="services-grid">
-                <div class="title">
-                    <h2><strong>MIS SERVICIOS</strong></h2>
-                </div>
-                <article class="arti1">
-                    <h3>Diseño Web Responsivo</h3>
-                    <p>Desarrollo sitios web que se adaptan perfectamente a cualquier dispositivo, computadoras,
-                        tabletas o smartphones, garantizando una experiencia visual fluida y profesional para todos
-                        los usuarios.</p>
-                </article>
-                <article class="arti2">
-                    <h3>Desarrollo a Medida</h3>
-                    <p>Creo soluciones personalizadas según tus necesidades específicas y objetivos, con tu
-                        logotipo, tus colores. Todo se desarrolla desde cero con código limpio y escalable.</p>
-                </article>
-                <article class="arti3">
-                    <h3>Optimización SEO</h3>
-                    <p>Aplico técnicas de optimización para que tu sitio esté preparado para posicionarse bien en
-                        los motores de búsqueda, aumentando tu visibilidad y atrayendo más clientes de manera
-                        orgánica.</p>
-                </article>
-                <article class="arti4">
-                    <h3>Mantenimiento y Actualizaciones</h3>
-                    <p>Me encargo de mantener tu sitio siempre seguro, actualizado y funcionando correctamente.
-                        Realizo copias de seguridad, mejoras de rendimiento y corrección de errores cuando sea
-                        necesario.</p>
-                </article>
-                <article class="arti5">
-                    <h3>Optimización de Velocidad y Rendimiento</h3>
-                    <p>Mejoro los tiempos de carga de tu sitio web mediante la optimización de imágenes, recursos y
-                        código, logrando una navegación más rápida y una mejor experiencia para tus visitantes.</p>
-                </article>
-                <article class="arti6">
-                    <h3>Seguridad Web y Protección de Datos</h3>
-                    <p>Implemento medidas de seguridad para proteger tu sitio contra ataques, vulnerabilidades y
-                        accesos no autorizados. Configuro certificados SSL, validación de formularios y copias de
-                        respaldo para mantener tu información y la de tus clientes siempre segura.</p>
-                </article>
+    <section class="general-pagina">
+        <div class="contenedor">
+            <div class="title">
+                <h2><strong>Mis Servicios</strong></h2>
             </div>
+            <div class="servicios-grid">
+
+                <div class="servicio">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3>Destaca en línea</h3>
+                    <p class="nombre-servicio">Diseño y Desarrollo Web</p>
+                    <p class="descripcion">Creo sitios web atractivos, ágiles y adaptados a tus necesidades.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Acelera tus equipos</h3>
+                    <p class="nombre-servicio">Mantenimiento de Computadoras</p>
+                    <p class="descripcion">Optimización completa, limpieza y formateo para que tus equipos
+                        funcionen adecuadamente.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fa-solid fa-headset"></i>
+                    <h3>Solución inmediata</h3>
+                    <p class="nombre-servicio">Soporte Técnico Remoto y Presencial</p>
+                    <p class="descripcion">Te asisto rápidamente ante cualquier problema técnico, estés donde estés.
+                    </p>
+                </div>
+
+                <!--    <div class="servicio">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h3>Conéctate sin interrupciones</h3>
+                    <p class="nombre-servicio">Redes y Conectividad</p>
+                    <p class="descripcion">Configuramos y mejoramos tu red para obtener la máxima velocidad y
+                        estabilidad.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fa-solid fa-video"></i>
+                    <h3>Protege lo que más importa</h3>
+                    <p class="nombre-servicio">Sistemas de Videovigilancia</p>
+                    <p class="descripcion">Instalamos cámaras IP y CCTV con acceso remoto para tu tranquilidad.</p>
+                </div>
+
+                <div class="servicio">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Optimiza tu tecnología</h3>
+                    <p class="nombre-servicio">Asesoría y Consultoría Tecnológica</p>
+                    <p class="descripcion">Analizamos tus procesos y te ayudamos a implementar soluciones inteligentes.
+                    </p>
+                </div> -->
+            </div>
+        </div>
     </section>
     <!-- ===== FOOTER ===== -->
     <footer class="footer">

@@ -10,30 +10,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/cubo.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <title>Desarrollo Web - Home</title>
 </head>
 
 <body>
-    <!-- ===== CABECERA =====-->
-    <header class="header">
-        <div class="contenedor header-contenedor">
-            <!--Logo-->
-            <div class="logo">
-                <a href="#"><img src="img/logo.png" alt="Logo"></a>
-            </div>
-            <!-- nombre -->
-            <div class="container-name">
-                <h1 class="name"><strong>AdanVDev</AdanVDev></strong></h1>
-            </div>
-            <!-- ===== BARRA DE NAVEGACION =====-->
-            <nav class="navbar navbar-expand-lg custom-navbar">
-                <div class="container">
-                    <!-- Botón hamburguesa -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+    <header>
+        <section>
+
+            <nav class="navbar navbar-expand-lg navbar-dark bg-body-tertiary color-barranav">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="./img/logo.png" alt="Logo" width="30" height="24"
+                            class="d-inline-block align-text-top">
+                    </a>
+                    <div class="container-name">
+                        <h1 class="name"><strong>AdanVDev</strong></h1>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="menuNav">
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
 
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item"><a href="#" class="nav-link active" class="nav-link"
@@ -50,18 +52,19 @@
 
                             <li class="nav-item"><a href="./paginas/contacto.html" class="nav-link"
                                     href="#"><strong>Contacto</strong></a></li>
-
                         </ul>
                     </div>
+
                 </div>
             </nav>
-        </div>
+
+        </section>
     </header>
     <!-- ===== SECCION HERO  ===== -->
     <section class="hero">
         <div class="hero-contenedor">
             <h2>Desarrollo Web Profesional</h2>
-            <p>Creo sitios web modernos, rápidos y totalmente responsivos para impulsar tu presencia en línea.</p>
+            <p>Creo sitios web modernos, ágiles y totalmente responsivos para impulsar tu presencia en línea.</p>
             <p>"Hablemos de tu Proyecto"</p>
             <br>
             <a href="paginas/contacto.html" class="btn">Contactame</a>
@@ -69,41 +72,42 @@
     </section>
     <main>
         <!--  ====== SECCION CARACTERISTICAS ====== -->
-        <section class="services">
+        <section class="general-pagina">
             <div class="contenedor">
+                <div class="title">
+                    <h2><strong>Características</strong></h2>
+                </div>
                 <div class="services-grid">
-                    <div class="title">
-                        <h2><strong>CARACTERISTICAS</strong></h2>
-                    </div>
-                    <article class="arti1">
+
+                    <article class="caracteristicas">
                         <h3>Diseño Web Responsivo</h3>
                         <p>Desarrollo sitios web que se adaptan perfectamente a cualquier dispositivo, computadoras,
                             tabletas o smartphones, garantizando una experiencia visual fluida y profesional para todos
                             los usuarios.</p>
                     </article>
-                    <article class="arti2">
+                    <article class="caracteristicas">
                         <h3>Desarrollo a Medida</h3>
                         <p>Creo soluciones personalizadas según tus necesidades específicas y objetivos, con tu
                             logotipo, tus colores. Todo se desarrolla desde cero con código limpio y escalable.</p>
                     </article>
-                    <article class="arti3">
+                    <article class="caracteristicas">
                         <h3>Optimización SEO</h3>
                         <p>Aplico técnicas de optimización para que tu sitio esté preparado para posicionarse bien en
                             los motores de búsqueda, aumentando tu visibilidad y atrayendo más clientes de manera
                             orgánica.</p>
                     </article>
-                    <article class="arti4">
+                    <article class="caracteristicas">
                         <h3>Mantenimiento y Actualizaciones</h3>
                         <p>Me encargo de mantener tu sitio siempre seguro, actualizado y funcionando correctamente.
                             Realizo copias de seguridad, mejoras de rendimiento y corrección de errores cuando sea
                             necesario.</p>
                     </article>
-                    <article class="arti5">
+                    <article class="caracteristicas">
                         <h3>Optimización de Velocidad y Rendimiento</h3>
                         <p>Mejoro los tiempos de carga de tu sitio web mediante la optimización de imágenes, recursos y
                             código, logrando una navegación más rápida y una mejor experiencia para tus visitantes.</p>
                     </article>
-                    <article class="arti6">
+                    <article class="caracteristicas">
                         <h3>Seguridad Web y Protección de Datos</h3>
                         <p>Implemento medidas de seguridad para proteger tu sitio contra ataques, vulnerabilidades y
                             accesos no autorizados. Configuro certificados SSL, validación de formularios y copias de
