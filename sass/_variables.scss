@@ -1,0 +1,61 @@
+/* sass --watch sass/cssc.tyle.scss  css/styles.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+$fuente: "Work Sans", sans-serif;
+$background-claro: #cfe3f8;
+$background-medio: #00a1f3;
+$background-obscuro: #003c78;
+$fuenteColor: #000000;
+$color-hover: #FFD700;
+$color-texto: #ffffff;
+
+body {
+    font-family: $fuente;
+    font-weight: 500;
+    color: $fuenteColor;
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin card($border-radius, $border, $padding, $background-color) {
+
+    border-radius: $border-radius;
+    border: $border;
+    padding: $padding;
+    background-color: $background-color;
+}
+
+/* Boton de contacto */
+.btn {
+    border-radius: 30px;
+    border: 1px solid #003c78;
+    padding: 10px 25px;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: linear-gradient(90deg, $background-medio, $color-texto);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s infinite alternate;
+
+    &:hover {
+        animation-play-state: paused;
+        background: $color-hover;
+        color: #000000;
+        border: 1px solid #003c78;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}

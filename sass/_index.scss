@@ -1,0 +1,112 @@
+@use "variables" as v;
+
+/* Sección Hero */
+.hero {
+    position: relative;
+    background-image: url('../img/desarrollo-web.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    /* Alto de la sección */
+    color: #fff;
+    display: flex;
+    /* Centra el contenido */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    text-align: center;
+}
+
+.hero-contenedor {
+    position: relative;
+    top: 10px;
+    height: 70vh;
+    z-index: 1;
+
+    h2 {
+        color: v.$color-hover;
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .boton-hero {
+        @extend .btn;
+    }
+
+}
+
+/*sección Caracteristicas */
+.general-pagina {
+    background-color: v.$background-claro;
+    padding: 40px;
+    text-align: center;
+
+    .title {
+        padding: 30px;
+    }
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+    color: #000000;
+
+    p {
+        text-align: justify;
+    }
+}
+
+.caracteristicas {
+
+    @include v.card(10px, 1px solid #003c78, 25px, #fff);
+
+    i {
+        font-size: 2.3rem;
+        color: #003c78;
+        margin-bottom: 15px;
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 18px rgba(0, 60, 120, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+}
+
+/* Botón para subir al inicio de la pagina */
+.boton-fixed {
+    position: fixed;
+    bottom: 60px;
+    right: 25px;
+    background-color: #007bff;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    /* Nos permite centrar el icono fácilmente */
+    align-items: center;
+    /* Centra el icono verticalmente */
+    justify-content: center;
+    /* Centra el icono horizontalmente */
+    font-size: 24px;
+    /* Tamaño del icono */
+    text-decoration: none;
+    /* Quita el subrayado del enlace */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+
+    &:hover {
+        background-color: #0056b3;
+        color: #ffffff;
+    }
+
+}

@@ -1,0 +1,35 @@
+@use "variables" as v;
+
+.formulario {
+    background-color: #00a1f3;
+    width: 600px;
+    padding: 70px;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    .etiqueta-formulario {
+        padding: 20px;
+        text-align: justify;
+
+        .campo-texto {
+            width: 100%;
+            height: 2rem;
+            border-radius: 5px;
+        }
+
+        textarea {
+            border: 1px solid #000000;
+        }
+    }
+
+    .botones-formulario {
+        padding: 30px;
+        margin: 0 auto;
+
+        .botones {
+            height: 2.5rem;
+            border-radius: 5px;
+        }
+    }
+
+}

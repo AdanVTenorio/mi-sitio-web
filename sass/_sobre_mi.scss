@@ -1,0 +1,47 @@
+@use "variables" as v;
+
+/* Sección sobre mí */
+
+.sobre-mi {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content: space-between;
+    gap: 3rem;
+
+    .mi-foto {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        margin-top: 10rem;
+        border: 0.2rem solid #1b2266;
+    }
+
+    .informacion {
+        text-align: justify;
+
+        h2,
+        h3,
+        .contactame {
+            text-align: center;
+        }
+
+        .boton-contacto {
+            @extend .btn;
+        }
+    }
+
+    .logotipos {
+        margin-top: 3rem;
+
+        .logo-uni,
+        .logo-coder,
+        .logo-udemy,
+        .logo-platzi {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%;
+            margin: 1rem;
+            border: 0.2rem solid #1b2266;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@use "variables" as v;
+
+.color-barranav {
+    background-color: v.$background-medio !important;
+    color: v.$color-texto;
+}
+
+/* Logotipo */
+.navbar-brand img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Titulo */
+.name {
+    color: v.$background-obscuro;
+    font-size: 35px;
+}
+
+/* menu */
+.collapse {
+    ul {
+        li {
+            a {
+                font-size: 20px;
+                color: v.$color-texto;
+
+                &:hover {
+                    color: v.$background-claro;
+                    ;
+                }
+
+                &.active {
+                    color: v.$background-obscuro !important;
+                }
+            }
+        }
+    }
+}
