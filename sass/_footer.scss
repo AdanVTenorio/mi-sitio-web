@@ -1,58 +1,91 @@
-@use "variables" as v;
+@use "variables" as *;
+@use "mixins" as *;
 
+/* ===== FOOTER ===== */
 .footer {
-    background-color: v.$background-obscuro;
-    color: v.$color-texto;
-}
+    background-color: $background-obscuro;
+    color: $color-texto;
 
-a {
-    color: #fff;
-    text-decoration: none;
-}
+    /* CONTENEDOR PRINCIPAL */
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
-h3 {
-    margin-bottom: 10px;
-    color: #00a1f4;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
+        /* TITULOS */
+        h3 {
+            color: $background-medio;
+            font-size: 1.2rem;
+            font-weight: 500;
 
-a:hover {
-    color: #007bff;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-    .footer-social {
-        a {
-            display: block;
+            @include mobile {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
         }
-    }
 
-    .footer-links {
-        a {
+        /* LINKS GENERALES */
+        .footer-social a,
+        .footer-links a,
+        .aviso a {
+            color: $color-texto;
+            text-decoration: none;
             display: block;
+
+            @include mobile {
+                font-size: 0.7rem;
+                margin-bottom: 5px;
+            }
+        }
+
+        .footer-links {
+            margin-left: 10%;
+
+            @include mobile {
+                margin: auto;
+            }
+        }
+
+        .aviso {
+            text-align: center;
+            margin-top: 50px;
+
+            @include mobile {
+                margin-top: 0;
+            }
         }
 
         .active {
-            color: #FFD700 !important;
+            color: $color-hover !important;
+        }
+
+        a:hover {
+            color: $background-medio;
+        }
+
+        /* ======== MOBILE ======== */
+        @include mobile {
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            gap: 10px;
         }
     }
 
-    .escribeme {
+    /* DERECHOS RESERVADOS */
+    .footer-copy {
         text-align: center;
-    }
-}
+        padding-bottom: 10px;
+        font-size: 0.9rem;
+        border-top: 1px solid $background-medio;
 
-.footer-copy {
-    text-align: center;
-    padding-bottom: 10px;
-    font-size: 0.9rem;
-    border-top: 1px solid #007bff;
+        p {
+            @include mobile {
+                font-size: 0.6rem;
+            }
+        }
+    }
 }

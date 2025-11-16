@@ -1,39 +1,71 @@
-@use "variables" as v;
+@use "variables" as *;
+@use "mixins" as *;
 
 .color-barranav {
-    background-color: v.$background-medio !important;
-    color: v.$color-texto;
+    background-color: $background-medio !important;
+    color: $color-texto;
+
+    @include mobile {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
 }
 
 /* Logotipo */
 .navbar-brand img {
     width: 80px;
     height: 80px;
+
+    @include mobile {
+        width: 60px;
+        height: 60px;
+    }
 }
 
-/* Titulo */
+/* Título */
 .name {
-    color: v.$background-obscuro;
+    color: $background-obscuro;
     font-size: 35px;
+
+    @include mobile {
+        font-size: 22px;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
 }
 
-/* menu */
+/* Menú */
 .collapse {
     ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
         li {
             a {
-                font-size: 20px;
-                color: v.$color-texto;
+                font-size: 18px;
+                color: $color-texto;
 
                 &:hover {
-                    color: v.$background-claro;
-                    ;
+                    color: $background-claro;
                 }
 
                 &.active {
-                    color: v.$background-obscuro !important;
+                    color: $background-obscuro !important;
+                }
+
+                @include mobile {
+                    font-size: 14px;
+                    display: block;
+                    padding: 0.5rem 0;
                 }
             }
+        }
+
+        @include mobile {
+            flex-direction: column;
+            gap: 0.3rem;
         }
     }
 }

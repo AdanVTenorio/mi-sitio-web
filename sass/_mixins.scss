@@ -1,0 +1,19 @@
+@mixin card($border-radius, $border, $padding, $background-color) {
+
+    border-radius: $border-radius;
+    border: $border;
+    padding: $padding;
+    background-color: $background-color;
+}
+
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 577px) and (max-width: 991px) {
+        @content;
+    }
+}
