@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* sass --watch sass/cssc.style.scss  css/styles.css*/
+/* sass --watch sass/style.scss  css/styles.css*/
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 body {
   font-family: "Work Sans", sans-serif;
@@ -14,7 +14,8 @@ body {
   margin: 0 auto;
 }
 
-/* @extend Boton de contacto en Hero y Sobre mí*/
+/* ====== BOTONES FLOTANTES ===== */
+/*Boton de contactame*/
 .btn, .btn-contacto .boton-contacto, .btn-contacto .boton-contactame, .sobre-mi .informacion .boton-contactame, .hero-contenedor .boton-contactame {
   border-radius: 30px;
   border: 1px solid #003c78;
@@ -39,6 +40,24 @@ body {
   }
   100% {
     background-position: 100% 50%;
+  }
+}
+/* ANIMACIONES */
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(20);
+  }
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 .color-barranav {
@@ -155,7 +174,7 @@ body {
     font-size: 1.2rem;
   }
 }
-/*sección Caracteristicas */
+/*sección caracteristicas */
 .general-pagina {
   background-color: #cfe3f8;
   padding: 40px;
@@ -179,7 +198,7 @@ body {
   .services-grid {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1.2rem;
     margin: 0% auto;
   }
 }
@@ -222,16 +241,50 @@ body {
   text-decoration: none;
   /* Quita el subrayado del enlace */
   z-index: 1000;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
   /* Asegura que esté por encima de otros elementos */
 }
 @media (min-width: 320px) and (max-width: 768px) {
   .boton-fixed {
     width: 40px;
     height: 40px;
+    right: 10px;
   }
 }
 .boton-fixed:hover {
-  background-color: #FFD700;
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+/* WHATSAPP */
+.whatsapp-btn {
+  position: fixed;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  font-size: 24px;
+  color: #fff;
+  bottom: 120px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  animation: vibrate 2s infinite ease-in-out;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .whatsapp-btn {
+    width: 40px;
+    height: 40px;
+    right: 10px;
+  }
+}
+.whatsapp-btn:hover {
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
 }
 
 /* Sección sobre mí */
@@ -330,7 +383,7 @@ body {
 @media (min-width: 320px) and (max-width: 768px) {
   .servicios-grid .card {
     width: auto;
-    perspective: 30rem;
+    perspective: 40rem;
   }
 }
 .servicios-grid .card-inner {
@@ -339,6 +392,12 @@ body {
   transform-style: preserve-3d;
   transition: transform 0.6s;
   position: relative;
+  cursor: pointer;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .servicios-grid .card-inner {
+    transition: transform 0.4s;
+  }
 }
 .servicios-grid {
   /* Rotacion */

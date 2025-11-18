@@ -52,7 +52,7 @@
 
 }
 
-/*sección Caracteristicas */
+/*sección caracteristicas */
 .general-pagina {
     background-color: $background-claro;
     padding: 40px;
@@ -77,7 +77,7 @@
     @include mobile {
         display: flex;
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1.2rem;
         margin: 0% auto;
     }
 }
@@ -120,14 +120,50 @@
     text-decoration: none;
     /* Quita el subrayado del enlace */
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
 
     /* Asegura que esté por encima de otros elementos */
     @include mobile {
         width: 40px;
         height: 40px;
+        right: 10px;
+
     }
 
     &:hover {
-        background-color: $color-hover;
+        box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
+        transform: scale(1.1);
+    }
+}
+
+/* WHATSAPP */
+
+.whatsapp-btn {
+    position: fixed;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    font-size: 24px;
+    color: #fff;
+    bottom: 120px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    animation: vibrate 2s infinite ease-in-out;
+
+    @include mobile {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+    }
+
+    &:hover {
+        box-shadow: 0 6px 25px rgba(255, 255, 255, 0.4);
     }
 }

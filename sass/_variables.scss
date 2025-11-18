@@ -1,4 +1,4 @@
-/* sass --watch sass/cssc.style.scss  css/styles.css*/
+/* sass --watch sass/style.scss  css/styles.css*/
 
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -23,7 +23,9 @@ body {
     margin: 0 auto;
 }
 
-/* @extend Boton de contacto en Hero y Sobre mí*/
+/* ====== BOTONES FLOTANTES ===== */
+
+/*Boton de contactame*/
 .btn {
     border-radius: 30px;
     border: 1px solid #003c78;
@@ -50,5 +52,28 @@ body {
 
     100% {
         background-position: 100% 50%;
+    }
+}
+
+/* ANIMACIONES */
+@keyframes vibrate {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-20px);
+    }
+
+    50% {
+        transform: translateX(20);
+    }
+
+    75% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
