@@ -23,6 +23,19 @@
             width: auto;
             perspective: 40rem;
         }
+
+        @include tablet {
+            width: auto; //que ocupe el ancho del contenedor 
+            perspective: 900px; //reduce la profundidad 
+        }
+
+        @include laptop {
+            width: auto;
+            perspective: 60rem;
+            /*   width: 14rem; */
+            height: 26rem;
+            padding: 1.25rem;
+        }
     }
 
     .card-inner {
@@ -36,10 +49,17 @@
         @include mobile {
             transition: transform 0.4s;
         }
+
+        @include tablet {
+            transition: transform 0.6s;
+        }
+
+        @include laptop {
+            transition: transform 0.8s;
+        }
     }
 
     .card:hover .card-inner {
-
         transform: rotateY(180deg);
     }
 
@@ -82,7 +102,21 @@
                 font-size: 1.8rem;
             }
         }
+
+        @include tablet {
+            font-size: 0.9rem;
+            padding: 1.25rem;
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            i {
+                font-size: 1.8rem;
+            }
+        }
     }
+
 
     .card-back {
         background-color: white;
