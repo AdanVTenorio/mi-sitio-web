@@ -7,7 +7,7 @@
     background-image: url('../img/desarrollo-web.jpg');
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    height: auto;
     /* Alto de la sección */
     color: #fff;
     display: flex;
@@ -21,25 +21,27 @@
 
 .hero-contenedor {
     position: relative;
-    top: 10px;
+    /*   padding: 100px; */
+    top: 15px;
     height: 70vh;
     z-index: 1;
 
     /* Desarrollo web profesional*/
-    h2 {
+    h1 {
         color: $color-hover;
-        font-size: 3rem;
-        margin-bottom: 10px;
+        font-size: 2rem;
+        margin: 30px;
 
         @include mobile {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
         }
     }
 
 
-    p {
-        font-size: 1.5rem;
-        margin-bottom: 20px;
+    .parrafo-hero {
+        font-size: 1.8rem;
+        margin: 30px;
+
 
         @include mobile {
             font-size: 1.2rem;
@@ -50,6 +52,10 @@
         @extend .btn;
     }
 
+    @include mobile {
+        height: auto;
+        margin-bottom: 35px;
+    }
 }
 
 /*sección caracteristicas */

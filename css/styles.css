@@ -14,7 +14,6 @@ body {
   margin: 0 auto;
 }
 
-/* ====== BOTONES FLOTANTES ===== */
 /*Boton de contactame*/
 .btn, .btn-contacto .boton-contacto, .btn-contacto .boton-contactame, .sobre-mi .informacion .boton-contactame, .hero-contenedor .boton-contactame {
   border-radius: 30px;
@@ -42,7 +41,7 @@ body {
     background-position: 100% 50%;
   }
 }
-/* ANIMACIONES */
+/* ANIMACIONES BOTON WHATSAPP*/
 @keyframes vibrate {
   0% {
     transform: translateX(0);
@@ -133,7 +132,7 @@ body {
   background-image: url("../img/desarrollo-web.jpg");
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: auto;
   /* Alto de la sección */
   color: #fff;
   display: flex;
@@ -147,30 +146,38 @@ body {
 
 .hero-contenedor {
   position: relative;
-  top: 10px;
+  /*   padding: 100px; */
+  top: 15px;
   height: 70vh;
   z-index: 1;
   /* Desarrollo web profesional*/
 }
-.hero-contenedor h2 {
+.hero-contenedor h1 {
   color: #FFD700;
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin: 30px;
 }
 @media (min-width: 320px) and (max-width: 768px) {
-  .hero-contenedor h2 {
-    font-size: 2.5rem;
+  .hero-contenedor h1 {
+    font-size: 1.5rem;
   }
 }
-.hero-contenedor p {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+.hero-contenedor .parrafo-hero {
+  font-size: 1.8rem;
+  margin: 30px;
 }
 @media (min-width: 320px) and (max-width: 768px) {
-  .hero-contenedor p {
+  .hero-contenedor .parrafo-hero {
     font-size: 1.2rem;
   }
 }
+@media (min-width: 320px) and (max-width: 768px) {
+  .hero-contenedor {
+    height: auto;
+    margin-bottom: 35px;
+  }
+}
+
 /*sección caracteristicas */
 .general-pagina {
   background-color: #cfe3f8;
