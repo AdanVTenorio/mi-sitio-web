@@ -515,22 +515,21 @@ body {
     font-size: 0.7rem;
   }
 }
-@media (min-width: 600px) and (orientation: landscape), (max-width: 1100px) and (orientation: landscape) {
-  .servicios-grid .card-front h3,
-  .servicios-grid .card-back h3 {
-    font-size: 1rem;
-  }
-  .servicios-grid .card-front li,
-  .servicios-grid .card-back li {
-    font-size: 0.9rem;
-  }
-}
 .servicios-grid .card-back {
   background-color: white;
   border: 1px solid #003c78;
   text-align: justify;
   border-radius: 10px;
   transform: rotateY(180deg);
+}
+@media (min-width: 600px) and (orientation: landscape), (max-width: 1100px) and (orientation: landscape) {
+  .servicios-grid h3 {
+    color: aqua;
+    font-size: 0.8rem;
+  }
+  .servicios-grid li {
+    font-size: 0.5rem;
+  }
 }
 
 /*  Botón Contactame */
@@ -761,4 +760,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles%20css.map */
