@@ -23,3 +23,11 @@
         @content;
     }
 }
+
+@mixin mobile-landscape {
+
+    @media (max-width: 480px) and (orientation: landscape),
+    (max-height: 500px) and (orientation: landscape) {
+        @content;
+    }
+}
