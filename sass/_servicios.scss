@@ -32,7 +32,6 @@
         @include laptop {
             width: auto;
             perspective: 60rem;
-            /*   width: 14rem; */
             height: 26rem;
             padding: 1.25rem;
         }
@@ -113,6 +112,20 @@
 
             i {
                 font-size: 1.8rem;
+            }
+        }
+
+        @include mobile-landscape {
+            h3 {
+                font-size: 1rem;
+            }
+
+            i {
+                font-size: 1.5rem;
+            }
+
+            li {
+                font-size: 0.7rem;
             }
         }
     }

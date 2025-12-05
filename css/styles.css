@@ -414,7 +414,6 @@ body {
   .servicios-grid .card {
     width: auto;
     perspective: 60rem;
-    /*   width: 14rem; */
     height: 26rem;
     padding: 1.25rem;
   }
@@ -500,6 +499,20 @@ body {
   .servicios-grid .card-front i,
   .servicios-grid .card-back i {
     font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) and (orientation: landscape), (max-height: 500px) and (orientation: landscape) {
+  .servicios-grid .card-front h3,
+  .servicios-grid .card-back h3 {
+    font-size: 1rem;
+  }
+  .servicios-grid .card-front i,
+  .servicios-grid .card-back i {
+    font-size: 1.5rem;
+  }
+  .servicios-grid .card-front li,
+  .servicios-grid .card-back li {
+    font-size: 0.7rem;
   }
 }
 .servicios-grid .card-back {
