@@ -129,7 +129,7 @@ body {
 /* Sección Hero */
 .hero {
   position: relative;
-  background-image: url("../img/desarrollo-web.jpg");
+  background-image: url("../img/desarrollo-web.webp");
   background-size: cover;
   background-position: center;
   height: auto;
@@ -297,9 +297,6 @@ body {
   grid-template-columns: 1fr 3fr 1fr;
   justify-content: space-between;
   gap: 3rem;
-}
-.sobre-mi h2 {
-  color: #00a1f3;
 }
 .sobre-mi .foto {
   margin-top: 120px;
@@ -534,6 +531,21 @@ body {
 .btn-contacto {
   margin-top: 30px;
 }
+.horario {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background: linear-gradient(90deg, #00a1f3, #cfe3f8);
+  background-size: 200% 200%;
+  animation: gradientAnimation 1s infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
 .formulario {
   border-radius: 10px;
   border: 1px solid #003c78;
@@ -541,6 +553,8 @@ body {
   background-color: #00a1f3;
   width: 600px;
   margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 .formulario .etiqueta-formulario {
   padding: 20px;
@@ -573,10 +587,54 @@ body {
     padding: 20px;
   }
 }
+.formulario .sera-un-placer {
+  font-size: 30px;
+  font-family: cursive;
+}
+.formulario .sera-un-placer .fa-regular {
+  background-color: yellow;
+  color: black;
+  border-radius: 50%;
+  font-size: 30px;
+}
 @media (min-width: 320px) and (max-width: 768px) {
   .formulario {
     padding: 10px;
     width: auto;
+  }
+}
+
+.mapa,
+.horario {
+  border-radius: 10px;
+  border: 1px solid #003c78;
+  padding: 20px;
+  background-color: #00a1f3;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+  margin: 0 auto;
+}
+.mapa .iframe-mapa,
+.horario .iframe-mapa {
+  border-radius: 10px;
+  width: 550px;
+  height: 450px;
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .mapa .iframe-mapa,
+  .horario .iframe-mapa {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 320px) and (max-width: 768px) {
+  .mapa,
+  .horario {
+    width: 100%;
+    height: auto;
   }
 }
 

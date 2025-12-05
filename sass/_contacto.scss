@@ -1,11 +1,29 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.formulario {
+.horario {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background: linear-gradient(90deg, $background-medio, $background-claro);
+    background-size: 200% 200%;
+    animation: gradientAnimation 1s infinite alternate;
+}
 
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.formulario {
     @include card(10px, 1px solid $background-obscuro, 70px, $background-medio);
     width: 600px;
     margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
 
     .etiqueta-formulario {
         padding: 20px;
@@ -41,9 +59,47 @@
         }
     }
 
+    .sera-un-placer {
+        font-size: 30px;
+        font-family: cursive;
+
+        .fa-regular {
+            background-color: yellow;
+            color: black;
+            border-radius: 50%;
+            font-size: 30px;
+        }
+    }
+
     @include mobile {
         padding: 10px;
         width: auto;
     }
+}
 
+.mapa,
+.horario {
+    @include card(10px, 1px solid $background-obscuro, 20px, $background-medio);
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+
+    .iframe-mapa {
+        border-radius: 10px;
+        width: 550px;
+        height: 450px;
+
+        @include mobile {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @include mobile {
+        width: 100%;
+        height: auto;
+    }
 }

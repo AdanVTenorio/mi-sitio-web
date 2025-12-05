@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Servicios</title>
 </head>
 
@@ -23,8 +24,9 @@
                 <div class="container-fluid">
 
                     <a class="navbar-brand" href="../index.html">
-                        <img src="../img/tags-desarrollo-web.png" alt="Logo" width="30" height="24"
-                            class="d-inline-block align-text-top">
+                        <img src="../img/tags-desarrollo-web.webp"
+                            alt="Logotipo dos tags de html dentro de un circulo y dentro de un rombo" loading="lazy"
+                            decoding="async" width="30" height="24" class="d-inline-block align-text-top">
                     </a>
 
                     <div class="container-name">
@@ -60,7 +62,7 @@
     <section class="general-pagina">
         <div class="contenedor">
             <div class="title">
-                <h2><strong>Mis Servicios</strong></h2>
+                <h2 data-aos="fade-down"><strong>Mis Servicios</strong></h2>
             </div>
             <div class="servicios-grid">
                 <div class="card">
@@ -70,7 +72,7 @@
                             <h3>Destaca en línea</h3>
                             <p class="nombre-servicio">Diseño y Desarrollo Web</p>
                             <p class="descripcion">Creo sitios web atractivos, ágiles y adaptados a tus necesidades.</p>
-                            <p>Mas...</p>
+                            <p><u>Mas...</u></p>
                         </div>
                         <div class="card-back">
                             <h3>Caracteristicas</h3>
@@ -132,7 +134,7 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-contacto">
+            <div data-aos="fade-down" class="btn-contacto">
                 <a href="./contacto.html" class="boton-contactame">Contactame</a>
             </div>
         </div>
@@ -184,6 +186,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
