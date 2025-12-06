@@ -414,6 +414,10 @@ body {
   color: #ffffff;
   margin-bottom: 0.5rem;
 }
+.sobre-mi .sobre-mi-columna-central .contactame .hablemos-proyecto {
+  font-size: 25px;
+  font-family: cursive;
+}
 .sobre-mi .sobre-mi-columna-central .contactame .btn-contacto {
   padding: 20px;
 }
