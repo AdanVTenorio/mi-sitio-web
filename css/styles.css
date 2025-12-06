@@ -15,7 +15,7 @@ body {
 }
 
 /*=====BOTON CONTACTAME======*/
-.btn, .btn-contacto .boton-contactame, .sobre-mi .informacion .boton-contactame, .hero-contenedor .boton-contactame {
+.btn, .btn-contacto .boton-contactame, .hero-contenedor .boton-contactame {
   border-radius: 30px;
   border: 1px solid #003c78;
   padding: 10px 25px;
@@ -26,7 +26,7 @@ body {
   animation: gradientAnimation 1s infinite alternate;
   text-decoration: none;
 }
-.btn:hover, .btn-contacto .boton-contactame:hover, .sobre-mi .informacion .boton-contactame:hover, .hero-contenedor .boton-contactame:hover {
+.btn:hover, .btn-contacto .boton-contactame:hover, .hero-contenedor .boton-contactame:hover {
   animation-play-state: paused;
   background: #FFD700;
   color: #000000;
@@ -57,96 +57,6 @@ body {
   }
   100% {
     transform: translateX(0);
-  }
-}
-/* =====CUBO===== */
-.scene {
-  display: flex;
-  /* Centra el contenido usando Flexbox */
-  justify-content: center;
-  /* Centra horizontalmente el .scene dentro del body */
-  align-items: center;
-  /* Centra verticalmente el .scene dentro del body */
-  margin: 0;
-  /* Quita márgenes por defecto del body */
-  margin-top: 50px;
-  height: 6rem;
-  /* alto del área de escena */
-}
-
-.cube {
-  width: 6rem;
-  /* ancho del cubo (coincide con las caras) */
-  height: 6rem;
-  /* alto del cubo */
-  position: relative;
-  /* referencia para las caras posicionadas en absolute dentro */
-  transform-style: preserve-3d;
-  /* crucial: conserva el espacio 3D para los hijos */
-  animation: rotateCube 5s infinite linear;
-  /* aplica la animación que rota el cubo */
-}
-
-.face {
-  position: absolute;
-  /* las caras se posicionan libremente dentro del cubo */
-  width: 6rem;
-  /* ancho de cada cara */
-  height: 6rem;
-  /* alto de cada cara */
-  background: rgb(0, 150, 255);
-  /* Color de las caras */
-  background-image: url("../img/tags-desarrollo-web.webp");
-  /* Para poner una imagen en las caras del cubo */
-  background-size: cover;
-  /* color y opacidad de la cara */
-  border: 2px solid #fff;
-  /* borde para distinguir las caras */
-  display: flex;
-  /* para centrar el número dentro de la cara */
-  align-items: center;
-  /* centra verticalmente el contenido de la cara */
-  justify-content: center;
-  /* centra horizontalmente el contenido */
-  font-size: 2rem;
-  /* tamaño del número */
-  color: #fff;
-  /* color del texto */
-  font-family: sans-serif;
-  /* fuente */
-}
-
-/* Posición de las caras */
-.front {
-  transform: translateZ(3rem);
-}
-
-.back {
-  transform: rotateY(180deg) translateZ(3rem);
-}
-
-.right {
-  transform: rotateY(90deg) translateZ(3rem);
-}
-
-.left {
-  transform: rotateY(-90deg) translateZ(3rem);
-}
-
-.top {
-  transform: rotateX(90deg) translateZ(3rem);
-}
-
-.bottom {
-  transform: rotateX(-90deg) translateZ(3rem);
-}
-
-@keyframes rotateCube {
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
   }
 }
 .color-barranav {
@@ -429,18 +339,86 @@ body {
     margin-top: 10px;
   }
 }
-.sobre-mi .informacion {
-  text-align: justify;
+.sobre-mi {
+  /* mi informacion */
 }
-.sobre-mi .informacion .title {
-  text-align: center;
-  padding: 10px;
-  margin-bottom: 10px;
+.sobre-mi .sobre-mi-columna-central {
+  padding: 2.5rem;
+  background-color: rgba(0, 161, 243, 0.1);
+  border-radius: 12px;
 }
-.sobre-mi .informacion h2,
-.sobre-mi .informacion h4,
-.sobre-mi .informacion .contactame {
+@media (min-width: 320px) and (max-width: 768px) {
+  .sobre-mi .sobre-mi-columna-central {
+    padding: 1.5rem;
+  }
+}
+.sobre-mi .sobre-mi-columna-central .titulo-seccion-principal {
   text-align: center;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion h2 {
+  font-size: 1.6rem;
+  color: #000000;
+  line-height: 1.3;
+  margin-top: 0;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000000;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion p strong {
+  color: #000000;
+  font-weight: 600;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion .lista-servicios-resumen {
+  padding-left: 1.25rem;
+  margin: 1rem 0;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion .lista-servicios-resumen li {
+  list-style: none;
+  /* Quitar el punto */
+  position: relative;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.sobre-mi .sobre-mi-columna-central .bloque-informacion .lista-servicios-resumen li::before {
+  content: "—";
+  /* Reemplazar el punto con un guion o ícono */
+  color: #cfe3f8;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.sobre-mi .sobre-mi-columna-central .contactame {
+  background-color: #00a1f3;
+  color: #000000;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+}
+.sobre-mi .sobre-mi-columna-central .contactame h2,
+.sobre-mi .sobre-mi-columna-central .contactame p {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.sobre-mi .sobre-mi-columna-central .contactame .btn-contacto {
+  padding: 20px;
+}
+.sobre-mi {
+  /* fin mi informacion */
 }
 .sobre-mi .logotipos {
   margin-top: 3rem;
@@ -627,6 +605,95 @@ body {
 /*  Botón Contactame */
 .btn-contacto {
   margin-top: 30px;
+}
+.scene {
+  display: flex;
+  /* Centra el contenido usando Flexbox */
+  justify-content: center;
+  /* Centra horizontalmente el .scene dentro del body */
+  align-items: center;
+  /* Centra verticalmente el .scene dentro del body */
+  margin: 0;
+  /* Quita márgenes por defecto del body */
+  margin-top: 50px;
+  height: 6rem;
+  /* alto del área de escena */
+}
+
+.cube {
+  width: 6rem;
+  /* ancho del cubo (coincide con las caras) */
+  height: 6rem;
+  /* alto del cubo */
+  position: relative;
+  /* referencia para las caras posicionadas en absolute dentro */
+  transform-style: preserve-3d;
+  /* crucial: conserva el espacio 3D para los hijos */
+  animation: rotateCube 5s infinite linear;
+  /* aplica la animación que rota el cubo */
+}
+
+.face {
+  position: absolute;
+  /* las caras se posicionan libremente dentro del cubo */
+  width: 6rem;
+  /* ancho de cada cara */
+  height: 6rem;
+  /* alto de cada cara */
+  background: rgb(0, 150, 255);
+  /* Color de las caras */
+  background-image: url("../img/tags-desarrollo-web.webp");
+  /* Para poner una imagen en las caras del cubo */
+  background-size: cover;
+  /* color y opacidad de la cara */
+  border: 2px solid #fff;
+  /* borde para distinguir las caras */
+  display: flex;
+  /* para centrar el número dentro de la cara */
+  align-items: center;
+  /* centra verticalmente el contenido de la cara */
+  justify-content: center;
+  /* centra horizontalmente el contenido */
+  font-size: 2rem;
+  /* tamaño del número */
+  color: #fff;
+  /* color del texto */
+  font-family: sans-serif;
+  /* fuente */
+}
+
+/* Posición de las caras */
+.front {
+  transform: translateZ(3rem);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(3rem);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(3rem);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(3rem);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(3rem);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(3rem);
+}
+
+@keyframes rotateCube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
 }
 /* =====PORTAFOLIO===== */
 body {
