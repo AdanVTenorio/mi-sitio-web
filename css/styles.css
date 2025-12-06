@@ -14,7 +14,7 @@ body {
   margin: 0 auto;
 }
 
-/*Boton de contactame*/
+/*=====BOTON CONTACTAME======*/
 .btn, .btn-contacto .boton-contactame, .sobre-mi .informacion .boton-contactame, .hero-contenedor .boton-contactame {
   border-radius: 30px;
   border: 1px solid #003c78;
@@ -41,7 +41,7 @@ body {
     background-position: 100% 50%;
   }
 }
-/* ANIMACIONES BOTON WHATSAPP*/
+/* =====ANIMACIONES BOTON WHATSAPP======*/
 @keyframes vibrate {
   0% {
     transform: translateX(0);
@@ -57,6 +57,96 @@ body {
   }
   100% {
     transform: translateX(0);
+  }
+}
+/* =====CUBO===== */
+.scene {
+  display: flex;
+  /* Centra el contenido usando Flexbox */
+  justify-content: center;
+  /* Centra horizontalmente el .scene dentro del body */
+  align-items: center;
+  /* Centra verticalmente el .scene dentro del body */
+  margin: 0;
+  /* Quita márgenes por defecto del body */
+  margin-top: 50px;
+  height: 6rem;
+  /* alto del área de escena */
+}
+
+.cube {
+  width: 6rem;
+  /* ancho del cubo (coincide con las caras) */
+  height: 6rem;
+  /* alto del cubo */
+  position: relative;
+  /* referencia para las caras posicionadas en absolute dentro */
+  transform-style: preserve-3d;
+  /* crucial: conserva el espacio 3D para los hijos */
+  animation: rotateCube 5s infinite linear;
+  /* aplica la animación que rota el cubo */
+}
+
+.face {
+  position: absolute;
+  /* las caras se posicionan libremente dentro del cubo */
+  width: 6rem;
+  /* ancho de cada cara */
+  height: 6rem;
+  /* alto de cada cara */
+  background: rgb(0, 150, 255);
+  /* Color de las caras */
+  background-image: url("../img/tags-desarrollo-web.webp");
+  /* Para poner una imagen en las caras del cubo */
+  background-size: cover;
+  /* color y opacidad de la cara */
+  border: 2px solid #fff;
+  /* borde para distinguir las caras */
+  display: flex;
+  /* para centrar el número dentro de la cara */
+  align-items: center;
+  /* centra verticalmente el contenido de la cara */
+  justify-content: center;
+  /* centra horizontalmente el contenido */
+  font-size: 2rem;
+  /* tamaño del número */
+  color: #fff;
+  /* color del texto */
+  font-family: sans-serif;
+  /* fuente */
+}
+
+/* Posición de las caras */
+.front {
+  transform: translateZ(3rem);
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(3rem);
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(3rem);
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(3rem);
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(3rem);
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(3rem);
+}
+
+@keyframes rotateCube {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
   }
 }
 .color-barranav {
@@ -600,18 +690,18 @@ body {
 }
 .btn-primario:hover {
   background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #003c78;
+  color: #003c78;
+  border: 1px solid #003c78;
 }
 
 .btn-secundario {
-  background-color: transparent;
-  border: 2px solid #003c78;
-  color: #00a1f3;
+  background-color: #ffffff;
+  border: 1px solid #003c78;
+  color: #003c78;
 }
 .btn-secundario:hover {
   background-color: #00a1f3;
-  color: #000000;
+  color: #ffffff;
   border: none;
 }
 
@@ -736,25 +826,28 @@ body {
     display: none;
   }
 }
-.hero-portafolio .perfil-hero .mi-foto {
+.hero-portafolio .perfil-hero .logo {
+  padding: 35px;
+}
+.hero-portafolio .perfil-hero .logo .logotipo {
   width: 10rem;
   height: 10rem;
   border-radius: 50%;
 }
 @media (min-width: 1025px) and (max-width: 1440px) {
-  .hero-portafolio .perfil-hero .mi-foto {
+  .hero-portafolio .perfil-hero .logo .logotipo {
     width: 220px;
     height: 220px;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
-  .hero-portafolio .perfil-hero .mi-foto {
+  .hero-portafolio .perfil-hero .logo .logotipo {
     width: 200px;
     height: 200px;
   }
 }
 @media (min-width: 320px) and (max-width: 768px) {
-  .hero-portafolio .perfil-hero .mi-foto {
+  .hero-portafolio .perfil-hero .logo .logotipo {
     width: 160px;
     height: 160px;
     font-size: 2rem;
