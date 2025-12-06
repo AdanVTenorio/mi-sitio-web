@@ -1,46 +1,445 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-.mis-trabajos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+/* =====PORTAFOLIO===== */
+$radius: 12px;
+$transition: all 0.3s ease;
+$max-width: 1200px; // Aumentado ligeramente para laptops
 
-    .imagen {
-        a {
-            display: block;
-            width: 100%;
-            height: 260px; // altura fija igual para TODAS
-            overflow: hidden; // evita que la imagen se salga
-
-            @include mobile {
-                height: 180px;
-            }
-        }
-
-        img {
-            width: 100%;
-            height: 100%; // mantiene proporciones
-            object-fit: cover; // recorte bonito sin deformar
-            border-radius: 10px;
-
-            @include mobile {
-                border-radius: 6px;
-            }
-        }
-    }
-
-    @include mobile {
-        grid-template-columns: 1fr;
-        gap: 10px;
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: 768px) {
+        @content;
     }
 }
 
-.btn-contacto {
-    margin-top: 30px;
+@mixin tablet {
+    @media (min-width: 769px) and (max-width: 1024px) {
+        @content;
+    }
+}
 
-    .boton-contacto {
-        @extend .btn;
+@mixin laptop {
+    @media (min-width: 1025px) and (max-width: 1440px) {
+        @content;
+    }
+}
 
+@mixin mobile-landscape {
+
+    @media (max-width: 480px) and (orientation: landscape),
+    (max-height: 500px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin ipad-landscape {
+    @media (min-width: 900px) and (max-width: 1100px) and (orientation: landscape) {
+        @content;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $fuente;
+    line-height: 1.6;
+}
+
+.portafolio {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow-x: hidden;
+
+    // Ajuste de padding general para móviles
+    @include mobile {
+        padding: 1.5rem;
+    }
+}
+
+.titulo-seccion {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: $fuente-color;
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: $background-medio;
+        margin: 0.5rem auto 0;
+        border-radius: 2px;
+    }
+
+    @include mobile {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.btn-primario,
+.btn-secundario {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: $radius;
+    text-decoration: none;
+    font-weight: 600;
+    transition: $transition;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primario {
+    background-color: $background-medio;
+    color: $color-texto;
+
+    &:hover {
+        background-color: $color-texto;
+        color: $fuente-color;
+        border: 2px solid $background-obscuro;
+    }
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border: 2px solid $background-obscuro;
+    color: $background-medio;
+
+    &:hover {
+        background-color: $background-medio;
+        color: $fuente-color;
+        border: none;
+    }
+}
+
+.hero-portafolio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 85vh; // Altura base para pantallas grandes
+    gap: 2rem;
+
+    // --- Adaptaciones Responsive ---
+
+    @include laptop {
+        min-height: 70vh; // Menos altura en laptops
+        padding: 2rem 0;
+    }
+
+    @include tablet {
+        flex-direction: column-reverse; // Stack en tablets verticales
+        text-align: center;
+        justify-content: center;
+        min-height: auto;
+        padding: 4rem 0;
+    }
+
+    @include mobile {
+        flex-direction: column-reverse;
+        text-align: center;
+        justify-content: center;
+        min-height: auto;
+        padding: 3rem 0;
+    }
+
+    // Corrección crítica para móviles en horizontal (poca altura)
+    @include mobile-landscape {
+        min-height: auto;
+        padding: 1rem 0;
+        flex-direction: row; // Mantener lado a lado si cabe
+        align-items: flex-start;
+    }
+
+    .texto-hero {
+        flex: 1;
+
+        .etiqueta {
+            display: inline-block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: $background-obscuro;
+            background: rgba($background-medio, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .titulo {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin: 0 0 1.5rem 0;
+            color: $fuente-color;
+
+            @include tablet {
+                font-size: 3rem;
+            }
+
+            @include mobile {
+                font-size: 2.2rem;
+            }
+
+            @include mobile-landscape {
+                font-size: 1.8rem;
+            }
+        }
+
+        .descripcion {
+            font-size: 1.25rem;
+            color: $fuente-color;
+            margin-bottom: 2rem;
+            max-width: 550px;
+
+            // Centrar texto en tablet/mobile
+            @include tablet {
+                margin: 0 auto 2rem;
+            }
+
+            @include mobile {
+                margin: 0 auto 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        .botones-hero {
+            display: flex;
+            gap: 1rem;
+
+            @include tablet {
+                justify-content: center;
+            }
+
+            @include mobile {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            @include mobile-landscape {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .perfil-hero {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        // Ocultar o reducir avatar en landscape móvil para ganar espacio
+        @include mobile-landscape {
+            display: none;
+        }
+
+        .mi-foto {
+            width: 10rem;
+            height: 10rem;
+            border-radius: 50%;
+
+            @include laptop {
+                width: 220px;
+                height: 220px;
+            }
+
+            @include tablet {
+                width: 200px;
+                height: 200px;
+            }
+
+            @include mobile {
+                width: 160px;
+                height: 160px;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.servicios {
+    padding: 4rem 0;
+
+    @include mobile {
+        padding: 2rem 0;
+    }
+
+    .lista-servicios {
+        display: grid;
+        gap: 2rem;
+
+        // Configuración Base (Desktop Grande > 1440px)
+        grid-template-columns: repeat(3, 1fr);
+
+        // Laptop (1025px - 1440px)
+        @include laptop {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        // Tablet (769px - 1024px)
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        // iPad Landscape específico
+        @include ipad-landscape {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        // Mobile (320px - 768px)
+        @include mobile {
+            grid-template-columns: 1fr; // Una sola columna
+        }
+    }
+
+    .servicio-item {
+        background: $color-texto;
+        padding: 2rem;
+        border-radius: $radius;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: $transition;
+        border-top: 4px solid transparent;
+
+        &:hover {
+            transform: translateY(-5px);
+            border-top-color: $background-medio;
+        }
+    }
+}
+
+.proyectos {
+    padding: 4rem 0;
+
+    .grid-proyectos {
+        display: grid;
+        gap: 2rem;
+
+        // Base (> 1440px)
+        grid-template-columns: repeat(3, 1fr); // O 4 si son tarjetas pequeñas
+
+        @include laptop {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        // En móviles horizontales a veces conviene ver 2 columnas si son pequeñas
+        @include mobile-landscape {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .proyecto-item {
+        background: $color-texto;
+        border-radius: $radius;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: $transition;
+
+        &:hover {
+            transform: scale(1.02);
+        }
+
+        .miniatura {
+            height: 200px;
+            background-color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: $background-medio;
+
+            img {
+                border-radius: $radius;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .info-proyecto {
+            padding: 1.5rem;
+
+            h4 {
+                margin: 0 0 0.5rem;
+                font-size: 1.25rem;
+            }
+
+            p {
+                margin: 0;
+                color: $background-obscuro;
+                font-size: 0.95rem;
+            }
+        }
+    }
+}
+
+.algo-demi {
+    padding: 4rem 0;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem;
+
+        .chip {
+            background: $background-medio;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #e2e8f0;
+        }
+    }
+}
+
+.contacto {
+    padding: 4rem 0 6rem;
+
+    .form-contacto {
+        max-width: 500px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @include mobile {
+            width: 100%; // Asegurar ancho completo en móvil
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: $radius;
+            box-sizing: border-box;
+
+            &:focus {
+                outline: none;
+                border-color: $background-medio;
+            }
+        }
+
+        textarea {
+            min-height: 150px;
+        }
+
+        button {
+            font-size: 1.1rem;
+            width: 100%;
+        }
     }
 }

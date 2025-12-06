@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -45,7 +45,7 @@
                     </a>
 
                     <div class="container-name">
-                        <h1 class="name"><strong>AdanVDev</strong></h1>
+                        <span class="name"><strong>AdanVDev</strong></span>
                     </div>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -76,34 +76,124 @@
             </nav>
         </section>
     </header>
+
     <section class="general-pagina">
         <div class="contenedor">
-            <div class="title">
-                <h2><strong>Mi Portafolio</strong></h2>
-            </div>
-            <h3>Soy desarrollador web en formación.</h3>
-            <h4>Proyectos que demuestran mi crecimiento como desarrollador web</h4>
+            <div class="portafolio">
 
-            <p> Aquí muestro mis primeros proyectos donde aplico lo que voy aprendiendo.
-                Cada trabajo representa un nuevo desafío superado y un paso más en mi camino profesional.</p>
-            <div class="mis-trabajos">
-                <div class="imagen">
-                    <a href="#"><img src="../img/convertidores-calculadoras-genradorqr.webp"
-                            alt="herramientas para convertir, calculadora de IVA, compresor de imagenes, generador QR y coneversor de divisas "
-                            loading="lazy" decoding="async"></a>
+                <div class="hero-portafolio">
+                    <div class="texto-hero">
+                        <h1 class="etiqueta">Hola — Soy Adan</h1>
+                        <h2 class="titulo">Desarrollador Web Full‑Stack</h2>
+                        <p class="descripcion">Creo sitios web modernos y sistemas a medida usando
+                            HTML, CSS, PHP, JavaScript y MySQL.</p>
+
+                        <div class="botones-hero">
+                            <a href="./contacto.html" class="btn-primario">Contactar</a>
+                            <a href="#proyectos" class="btn-secundario">Ver proyectos</a>
+                        </div>
+                    </div>
+
+                    <div class="perfil-hero">
+                        <div class="foto">
+                            <img src="../img/tags-desarrollo-web.webp" alt="Foto personal del programador"
+                                loading="lazy" decoding="async" class="mi-foto" draggable="false">
+                        </div>
+                        <div>
+                            <p class="localidad">Desarrollador Web Profesional | Cuernavaca Morelos</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="imagen">
-                    <a href="#"><img src="../img/sistema-erp-min-convertido-de-png.webp"
-                            alt="Planeador de recursos empresariales ERP" loading="lazy" decoding="async"></a>
-                </div>
-                <div class="imagen">
-                    <a href="#"><img src="../img/bytepro-systems .webp"
-                            alt="Es una pagina web para una empresa de Ingenieria en Sistemas Computaciones"
-                            loading="lazy" decoding="async"></a>
-                </div>
-            </div>
-            <div class="btn-contacto">
-                <a href="./contacto.html" class="boton-contacto">Contactame</a>
+
+                <!-- ======= SERVICIOS ======= -->
+                <section id="servicios" class="servicios">
+                    <h3 class="titulo-seccion">Desarrollo</h3>
+
+                    <div class="lista-servicios">
+                        <div class="servicio-item">
+                            <h4>Paginas Web</h4>
+                            <p>Sitios dinámicos y administrables con PHP y buenas prácticas.</p>
+                        </div>
+
+                        <div class="servicio-item">
+                            <h4>E‑commerce</h4>
+                            <p>Tiendas online con carrito, inventarios y pasarela de pagos.</p>
+                        </div>
+
+                        <div class="servicio-item">
+                            <h4>Sistemas a Medida</h4>
+                            <p>ERP, CRM y paneles según necesidades del negocio.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======= PROYECTOS ======= -->
+                <section id="proyectos" class="proyectos">
+                    <h3 class="titulo-seccion">Proyectos</h3>
+
+                    <div class="grid-proyectos">
+
+                        <div class="proyecto-item">
+                            <div class="miniatura"><a href="#"><img src="../img/sistema-crm.webp"
+                                        alt=" plataforma tecnológica que ayuda a las empresas a gestionar y analizar las interacciones con sus clientes actuales y potenciales"
+                                        loading="lazy" decoding="async"></a></div>
+                            <div class="info-proyecto">
+                                <h4>Sistema CRM</h4>
+                                <p>Sistema para gestionar y analizar las interacciones con sus clientes. PHP ·
+                                    JavaScript ·
+                                    MySQL</p>
+                            </div>
+                        </div>
+
+                        <div class="proyecto-item">
+                            <div class="miniatura"><a href="#"><img src="../img/tienda-online.webp"
+                                        alt="Tienda Online con carrito de compras e inventario" loading="lazy"
+                                        decoding="async"></a></div>
+                            <div class="info-proyecto">
+                                <h4>E-Commerce</h4>
+                                <p>Tienda online con carrito y pagos. PHP · MySQL · Bootstrap</p>
+                            </div>
+                        </div>
+
+                        <div class="proyecto-item">
+                            <div class="miniatura"><a href="#"><img src="../img/bytepro-systems.webp"
+                                        alt="Es una pagina web para una empresa de Ingenieria en Sistemas Computaciones"
+                                        loading="lazy" decoding="async"></a></div>
+                            <div class="info-proyecto">
+                                <h4>Tech Solutions</h4>
+                                <p>Landing page con formulario y mapa. HTML · CSS · JavaScript</p>
+                            </div>
+                        </div>
+
+                        <div class="proyecto-item">
+                            <div class="miniatura"><a href="#"><img src="../img/dashboard-analitico.webp"
+                                        alt="Es una pagina web para una empresa de Ingenieria en Sistemas Computaciones"
+                                        loading="lazy" decoding="async"></a>
+                            </div>
+                            <div class="info-proyecto">
+                                <h4>Dashboard Analítico</h4>
+                                <p>Reporte de métricas con gráficos. JavaScript · Chart.js</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ======= SOBRE MÍ ======= -->
+                <section id="sobre-mi" class="algo-demi">
+                    <h3 class="titulo-seccion">Sobre mí</h3>
+                    <p>Soy desarrollador web Profesional. Construyo sitios ágiles, modernos y responsivos, tambien
+                        sistemas administrativos centrados en usabilidad y rendimiento.</p>
+
+                    <h4 class="subtitulo">Tecnologías</h4>
+                    <div class="tech-list">
+                        <span class="chip">HTML</span>
+                        <span class="chip">CSS</span>
+                        <span class="chip">PHP</span>
+                        <span class="chip">MySQL</span>
+                        <span class="chip">JavaScript</span>
+                        <span class="chip">Bootstrap</span>
+                    </div>
+                </section>
             </div>
         </div>
     </section>
