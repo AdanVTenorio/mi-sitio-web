@@ -1,6 +1,7 @@
 @use "variables" as *;
 @use "mixins" as *;
 
+
 .horario {
     transition: background-color 0.3s ease, color 0.3s ease;
     background: linear-gradient(90deg, $background-medio, $background-claro);
